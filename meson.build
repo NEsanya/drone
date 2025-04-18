@@ -18,6 +18,6 @@ deps = [
     dependency('pybind11', required: true),
     dependency('glm', required: true),
 ]
-srcs = files('logic/module.cpp', 'logic/drone.cpp', 'logic/position.cpp')
+srcs = files('logic/drone.cpp', 'logic/module.cpp', 'logic/vec3.cpp')
 
 py3.extension_module('logic', sources: srcs, dependencies: deps, install: true)

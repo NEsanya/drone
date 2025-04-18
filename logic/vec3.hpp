@@ -1,15 +1,15 @@
-#ifndef LOGIC_SRC_POSITION_HPP
-#define LOGIC_SRC_POSITION_HPP
+#ifndef LOGIC_SRC_VEC3_HPP
+#define LOGIC_SRC_VEC3_HPP
 
 #include <glm/glm.hpp>
 #include <pybind11/pybind11.h>
 
 #include <string>
 
-class Position {
+class Vec3 {
 public:
-  Position(float x, float y, float z) : pos_(x, y, z) {}
-  Position(const Position &pos) : pos_(pos.pos_) {}
+  Vec3(float x, float y, float z) : pos_(x, y, z) {}
+  Vec3(const Vec3 &pos) : pos_(pos.pos_) {}
 
   float &x() { return pos_.x; }
   const float x() const { return pos_.x; }
@@ -20,10 +20,13 @@ public:
 
   std::string format() const;
 
+  const float distance_to(const Vec3 &to) const;
+  const float length() const;
+
 private:
   glm::vec3 pos_;
 };
 
-void py_position_init(pybind11::module_ &m);
+void py_vec3_init(pybind11::module_ &m);
 
-#endif // LOGIC_SRC_POSITION_HPP
+#endif // LOGIC_SRC_VEC3_HPP

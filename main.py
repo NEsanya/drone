@@ -1,9 +1,8 @@
-from logic import Drone, Position
+from logic import Drone, Vec3
 
 def main():
-    abobus = Drone("Abobus")
-    abobus.go(Position(1, 2, 3))
-    print(abobus)
+    abobus = Drone(pos = (1, 3, 7))
+    print(abobus.pos.distance_to(Vec3(5, 2, 3)), abobus.pos.length())
 
 if __name__ == "__main__":
     main()
