@@ -5,7 +5,7 @@ readme = 'README.md'
 requires-python = '>=3.8'
 license = {file = 'LICENSE'}
 authors = [
-  {name = 'Bokhonko Roman', email = 'nesanya1990@gmail.com'},
+  {name = 'Bokhonko Roman', email = 'nesanya1990@gmail.com'}, {name = "Mayorov Daniil", email = "daniil.major123@gmail.com"}
 ]
 
 [build-system]
